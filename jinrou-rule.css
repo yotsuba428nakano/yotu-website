@@ -26,35 +26,51 @@ table th {
   background-color: #e0f0ff;
 }
 
+
 /* ==== ルール詳細 ==== */
-#rules ul {
+.rule-group {
+  background: #fff;
+  border-left: 6px solid #0078d7;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rule-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.rule-group h3 {
+  color: #0078d7;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rule-group ul {
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  margin: 0;
 }
 
-#rules li {
-  background: #ffffff;
-  border-left: 5px solid #0078d7;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.rule-group li {
+  background: #f9f9f9;
+  margin: 0.4rem 0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
   position: relative;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-#rules li::before {
+.rule-group li::before {
   content: "✔";
   color: #0078d7;
   font-weight: bold;
   margin-right: 0.5rem;
-}
-
-#rules li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* ==== 議論時間 ==== */
@@ -93,3 +109,4 @@ table th {
   font-size: 1.2rem;
   color: #0078d7;
 }
+
